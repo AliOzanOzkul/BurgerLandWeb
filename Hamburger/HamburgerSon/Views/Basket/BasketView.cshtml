@@ -1,0 +1,80 @@
+﻿@model (List<HamburgerWeb.ViewModels.HamburgerBasketVM> h, List<HamburgerWeb.ViewModels.EkstrasBasketVM> e)
+@{
+    ViewData["Title"] = "BasketView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="m-5">Basket</h1>
+
+<div class="m-5 ">
+
+    <hr />
+    @{ foreach (var item in Model.h)
+        {
+            <dl class="row">
+
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => item.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => item.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => item.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => item.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => item.Price)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => item.Price)
+                </dd>
+
+
+
+
+
+            </dl>
+            @Html.ActionLink("Sil", "HamburgerDelete", new { id = item.Id }, new { @class = "btn btn-danger" })
+
+        } }
+    @{ foreach (var item in Model.e)
+        {
+            <dl class="row">
+
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => item.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => item.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => item.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => item.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => item.Price)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => item.Price)
+                </dd>
+
+
+
+
+
+            </dl>
+            @Html.ActionLink("Sil", "EkstrasDelete", new { id = item.Id }, new { @class = "btn btn-danger" })
+
+        } }
+<div class="d-flex justify-content-end">
+    <a href="#" class="btn btn-success">Siparişi Onayla</a>
+</div>
+</div>
+

@@ -1,1 +1,2 @@
 # BurgerLandWeb
+This program has been developed using ASP.NET Core. It follows the code-first approach and utilizes SQL as the database. The program aims to provide customers who wish to purchase hamburgers with the ability to create their own carts, add, update, and remove desired items, and, finally, confirm their carts and place orders. There are two user types in the program: "User" and "Admin". The Admin has the ability to remove and update products in the system, as well as add new ones.

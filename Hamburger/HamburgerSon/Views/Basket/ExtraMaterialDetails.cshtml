@@ -1,0 +1,60 @@
+﻿@model HamburgerWeb.Models.ExtraMaterial
+
+@{
+    ViewData["Title"] = "ExtraMaterialDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<hr />
+<div class="row m-5">
+    <div class="col-md-6">
+        <form asp-action="AddToBasketExtra">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="text-center">
+                <div class="img-box">
+                    <img src="@Model.PictureUrl" alt="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" readonly />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            
+           
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input id="adet"  onchange="adetDegisti()" asp-for="Quantity" value="1" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input id="fiyat" asp-for="Price" class="form-control" readonly/>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+    var fiyat = parseFloat(document.getElementById("fiyat").value);
+    function adetDegisti() {
+
+        var adet = document.getElementById("adet").value;
+        var yeniFiyat = adet * fiyat;
+
+
+
+        document.getElementById("fiyat").value = yeniFiyat;
+    }
+
+
+</script>

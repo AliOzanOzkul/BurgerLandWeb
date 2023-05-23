@@ -1,0 +1,49 @@
+/* _content/HamburgerSon/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-zqv8lh7b26] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-zqv8lh7b26] {
+  color: #0077cc;
+}
+
+.btn-primary[b-zqv8lh7b26] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-zqv8lh7b26], .nav-pills .show > .nav-link[b-zqv8lh7b26] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-zqv8lh7b26] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-zqv8lh7b26] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-zqv8lh7b26] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-zqv8lh7b26] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-zqv8lh7b26] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
